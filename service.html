@@ -9,28 +9,68 @@
 </head>
 <body>
 
-  <div class="topbar"><div class="container"><div class="topbar__inner">
-    <div class="topbar__left"><span class="topbar__item">📞 <a href="tel:+4952611862 26">(05261) 18 62 26</a></span><span class="topbar__item">✉ <a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></span></div>
-    <div class="topbar__right"><span>Mo–Fr 8:30–18:00 Uhr &nbsp;|&nbsp; Sa 9:30–14:00 Uhr</span></div>
-  </div></div></div>
 
-  <header class="site-header"><div class="container header__inner">
-    <a href="index.html" class="header__logo"><img src="images/logo.png" alt="inkO GmbH Logo" /></a>
-    <div class="header__tagline"><strong>Qualität seit über 20 Jahren</strong>Einer der größten Gartenmöbelanbieter der Region</div>
-  </div></header>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="topbar">
+      <a href="tel:+4952611862 26" class="topbar__link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.68h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.32z"/></svg> (05261) 18 62 26</a>
+      <span class="topbar__sep"></span>
+      <a href="mailto:info@inko-moebel.de" class="topbar__link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@inko-moebel.de</a>
+    </div>
+    <div class="nav-bar">
+      <div class="nav-bar__inner">
+        <a href="index.html" class="nav-logo" aria-label="Inko GmbH – Startseite">
+          <span class="nav-logo__text">ink<strong>O</strong></span>
+          <span class="nav-logo__gmbh">GmbH</span>
+        </a>
+        <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="produkte.html" class="nav-link">PRODUKTE</a>
+        <a href="service.html" class="nav-link is-active">SERVICE</a>
+        <a href="galerie.html" class="nav-link">GALERIE</a>
+        <a href="grillcorner.html" class="nav-link">GRILL CORNER</a>
+        <a href="ueber-uns.html" class="nav-link">ÜBER UNS</a>
+        <a href="kontakt.html" class="nav-link">KONTAKT</a>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-  <nav class="main-nav" aria-label="Hauptnavigation"><div class="container nav__inner">
-    <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
-    <ul class="nav__menu">
-      <li><a class="nav__link" href="index.html">Home</a></li>
-      <li><a class="nav__link" href="produkte.html">Produkte</a></li>
-      <li><a class="nav__link is-active" href="service.html">Service</a></li>
-      <li><a class="nav__link" href="galerie.html">Galerie</a></li>
-      <li><a class="nav__link" href="grillcorner.html">Grill Corner</a></li>
-      <li><a class="nav__link" href="ueber-uns.html">Über uns</a></li>
-      <li><a class="nav__link" href="kontakt.html">Kontakt</a></li>
-    </ul>
-  </div></nav>
+  <!-- Mobile Drawer Backdrop -->
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="nav-drawer" id="nav-drawer" aria-label="Mobile Navigation">
+    <nav class="nav-drawer__links">
+      <a href="index.html" class="nav-drawer__link">HOME <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      <a href="produkte.html" class="nav-drawer__link">PRODUKTE <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      <a href="service.html" class="nav-drawer__link is-active">SERVICE <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      <a href="galerie.html" class="nav-drawer__link">GALERIE <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      <a href="grillcorner.html" class="nav-drawer__link">GRILL CORNER <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      <a href="ueber-uns.html" class="nav-drawer__link">ÜBER UNS <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      <a href="kontakt.html" class="nav-drawer__link">KONTAKT <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+    </nav>
+    <div class="nav-drawer__contact">
+      <div class="nav-drawer__contact-card">
+        <p class="nav-drawer__contact-label">Direkter Kontakt</p>
+        <a href="tel:+4952611862 26" class="nav-drawer__contact-link">
+          <span class="nav-drawer__contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.68h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.32z"/></svg></span>
+          (05261) 18 62 26
+        </a>
+        <a href="mailto:info@inko-moebel.de" class="nav-drawer__contact-link">
+          <span class="nav-drawer__contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          info@inko-moebel.de
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="header-spacer"></div>
 
   <main>
     <section class="page-hero">
