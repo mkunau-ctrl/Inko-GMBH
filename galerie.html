@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie — Inko GmbH | Gartenmöbel-Impressionen</title>
+  <meta name="description" content="Impressionen unserer Gartenmöbel – filterbar nach Material: Teakholz, Aluminium, Beton, Edelstahl, Eisen und Geflecht." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="header">
+    <nav class="nav container" aria-label="Hauptnavigation">
+      <a href="index.html" class="nav__logo">ink<span>O</span><small>Gartenmöbel</small></a>
+      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link" href="index.html">Home</a></li>
+        <li><a class="nav__link" href="produkte.html">Produkte</a></li>
+        <li><a class="nav__link" href="service.html">Service</a></li>
+        <li><a class="nav__link is-active" href="galerie.html">Galerie</a></li>
+        <li><a class="nav__link" href="grillcorner.html">Grill Corner</a></li>
+        <li><a class="nav__link" href="ueber-uns.html">Über uns</a></li>
+        <li><a class="nav__cta" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Page Hero ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Brotkrumen"><a href="index.html">Home</a> / Galerie</nav>
+        <h1>Galerie</h1>
+        <p>Lassen Sie sich inspirieren. Filtern Sie unsere Impressionen nach Material und entdecken Sie die Vielfalt unserer Kollektionen.</p>
+      </div>
+    </section>
+
+    <!-- ===== Galerie mit Filter ===== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="filter reveal" role="group" aria-label="Galerie filtern">
+          <button class="filter__btn is-active" data-filter="alle">Alle</button>
+          <button class="filter__btn" data-filter="teak">Teakholz</button>
+          <button class="filter__btn" data-filter="alu">Aluminium</button>
+          <button class="filter__btn" data-filter="beton">Beton</button>
+          <button class="filter__btn" data-filter="edelstahl">Edelstahl</button>
+          <button class="filter__btn" data-filter="eisen">Eisen</button>
+          <button class="filter__btn" data-filter="geflecht">Geflecht</button>
+        </div>
+
+        <div class="gallery reveal">
+          <div class="gallery__item media--teak"     data-category="teak"      role="img" aria-label="Teakholz Sitzgruppe"><span>Teak Sitzgruppe</span></div>
+          <div class="gallery__item media--alu"      data-category="alu"       role="img" aria-label="Aluminium Loungeset"><span>Alu Loungeset</span></div>
+          <div class="gallery__item media--geflecht" data-category="geflecht"  role="img" aria-label="Geflecht Lounge"><span>Geflecht Lounge</span></div>
+          <div class="gallery__item media--beton"    data-category="beton"     role="img" aria-label="Beton Esstisch"><span>Beton Esstisch</span></div>
+          <div class="gallery__item media--edelstahl" data-category="edelstahl" role="img" aria-label="Edelstahl Tischset"><span>Edelstahl Tisch</span></div>
+          <div class="gallery__item media--eisen"    data-category="eisen"     role="img" aria-label="Schmiedeeisen Bistro"><span>Eisen Bistro</span></div>
+          <div class="gallery__item media--teak"     data-category="teak"      role="img" aria-label="Teakholz Liege"><span>Teak Liege</span></div>
+          <div class="gallery__item media--alu"      data-category="alu"       role="img" aria-label="Aluminium Esstisch"><span>Alu Esstisch</span></div>
+          <div class="gallery__item media--geflecht" data-category="geflecht"  role="img" aria-label="Geflecht Sessel"><span>Geflecht Sessel</span></div>
+          <div class="gallery__item media--beton"    data-category="beton"     role="img" aria-label="Beton Gartenbank"><span>Beton Bank</span></div>
+          <div class="gallery__item media--edelstahl" data-category="edelstahl" role="img" aria-label="Edelstahl Lounge"><span>Edelstahl Lounge</span></div>
+          <div class="gallery__item media--eisen"    data-category="eisen"     role="img" aria-label="Eisen Gartenstuhl"><span>Eisen Stuhl</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA-Band ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Ihr Favorit ist dabei?</h2>
+          <p>Besuchen Sie unsere Ausstellungen in Lemgo oder Hille-Hartum und erleben Sie unsere Möbel live.</p>
+          <a href="kontakt.html" class="btn btn--primary">Standorte ansehen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">ink<span>O</span> GmbH</div>
+          <p>Einer der größten Gartenmöbelanbieter der Region. Hochwertige Gartenmöbel für den Fachhandel – Qualität seit über 20 Jahren.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produkte.html">Produkte</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Mehr</h4>
+          <ul class="footer__list">
+            <li><a href="grillcorner.html">Grill Corner</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hauptsitz Lemgo</h4>
+          <ul class="footer__list">
+            <li>Lagesche Straße 10-12</li>
+            <li>32657 Lemgo</li>
+            <li><a href="tel:+49526118 6226">(05261) 18 62 26</a></li>
+            <li><a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> Inko GmbH. Alle Rechte vorbehalten.</span>
+        <span><a href="kontakt.html">Impressum</a> &nbsp;·&nbsp; <a href="kontakt.html">Datenschutz</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
