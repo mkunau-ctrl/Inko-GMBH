@@ -317,11 +317,94 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
   padding: 1.75rem 1.5rem;
   box-shadow: 0 2px 10px var(--shadow);
   transition: transform var(--trans), box-shadow var(--trans);
+  height: 100%;
 }
 .feature-box:hover { transform: translateY(-4px); box-shadow: 0 8px 24px var(--shadow-md); }
-.feature-box__icon { font-size: 2.2rem; margin-bottom: 0.9rem; }
 .feature-box h3 { color: var(--nav-green); margin-bottom: 0.5rem; }
 .feature-box p { color: var(--text-mid); font-size: 0.95rem; }
+.feature-box__step {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  background: var(--nav-green); color: var(--white);
+  border-radius: 50%; font-weight: 700; font-size: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+/* ---------- Slider ---------- */
+.slider-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.slider-viewport {
+  overflow: hidden;
+  flex: 1;
+  border-radius: var(--radius-md);
+}
+.slider-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.slider-slide {
+  flex: 0 0 calc(100% / 3);
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+.slider-btn {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--nav-green);
+  background: var(--white);
+  color: var(--nav-green);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--trans), color var(--trans);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.slider-btn:hover {
+  background: var(--nav-green);
+  color: var(--white);
+}
+.slider-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.slider-btn:disabled:hover {
+  background: var(--white);
+  color: var(--nav-green);
+}
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.slider-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  transition: background var(--trans), transform var(--trans);
+  padding: 0;
+}
+.slider-dot.is-active {
+  background: var(--nav-green);
+  transform: scale(1.3);
+}
+
+@media (max-width: 820px) {
+  .slider-slide { flex: 0 0 calc(100% / 2); }
+}
+@media (max-width: 500px) {
+  .slider-slide { flex: 0 0 100%; }
+  .slider-btn { width: 36px; height: 36px; font-size: 1rem; }
+}
 
 /* ---------- Split Section ---------- */
 .split {

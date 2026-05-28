@@ -98,4 +98,68 @@
   /* ---- Jahreszahl ---- */
   var yr = document.querySelector('[data-year]');
   if (yr) yr.textContent = String(new Date().getFullYear());
+
+  /* ---- Feature Slider ---- */
+  var sliderWrap = document.querySelector('.slider-wrap');
+  var dotsWrap   = document.querySelector('.slider-dots');
+  if (sliderWrap) {
+    var track    = sliderWrap.querySelector('.slider-track');
+    var slides   = sliderWrap.querySelectorAll('.slider-slide');
+    var btnPrev  = sliderWrap.querySelector('.slider-btn--prev');
+    var btnNext  = sliderWrap.querySelector('.slider-btn--next');
+    var current  = 0;
+    var dots     = [];
+
+    function visibleCount() {
+      var w = sliderWrap.offsetWidth;
+      if (w < 500)  return 1;
+      if (w < 820)  return 2;
+      return 3;
+    }
+
+    function maxIndex() {
+      return Math.max(0, slides.length - visibleCount());
+    }
+
+    function goTo(idx) {
+      current = Math.max(0, Math.min(idx, maxIndex()));
+      var pct = (100 / visibleCount()) * current;
+      track.style.transform = 'translateX(-' + pct + '%)';
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current === maxIndex();
+      dots.forEach(function (d, i) { d.classList.toggle('is-active', i === current); });
+    }
+
+    // Build dots
+    if (dotsWrap) {
+      slides.forEach(function (_, i) {
+        var d = document.createElement('button');
+        d.className = 'slider-dot' + (i === 0 ? ' is-active' : '');
+        d.setAttribute('aria-label', 'Folie ' + (i + 1));
+        d.addEventListener('click', function () { goTo(i); });
+        dotsWrap.appendChild(d);
+        dots.push(d);
+      });
+    }
+
+    btnPrev.addEventListener('click', function () { goTo(current - 1); });
+    btnNext.addEventListener('click', function () { goTo(current + 1); });
+
+    // Swipe support
+    var touchStartX = 0;
+    sliderWrap.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    sliderWrap.addEventListener('touchend', function (e) {
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        goTo(diff > 0 ? current + 1 : current - 1);
+      }
+    }, { passive: true });
+
+    // Re-calculate on resize
+    window.addEventListener('resize', function () { goTo(current); });
+
+    goTo(0);
+  }
 })();
