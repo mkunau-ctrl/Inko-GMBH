@@ -2,14 +2,23 @@
 (function () {
   'use strict';
 
-  /* ---- Scroll-aware Header ---- */
+  /* ---- Scroll-aware Header + Spacer ---- */
   var header = document.getElementById('site-header');
+  var headerSpacer = document.querySelector('.header-spacer');
+  function syncSpacer() {
+    if (header && headerSpacer) {
+      headerSpacer.style.height = header.offsetHeight + 'px';
+    }
+  }
   if (header) {
     var onScroll = function () {
       header.classList.toggle('is-scrolled', window.scrollY > 20);
+      syncSpacer();
     };
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', syncSpacer);
     onScroll();
+    syncSpacer();
   }
 
   /* ---- Mobile Drawer ---- */
@@ -45,17 +54,47 @@
     });
   }
 
-  /* ---- Scroll Reveal ---- */
-  var revEls = document.querySelectorAll('.reveal');
+  /* ---- Page Scroll Progress Bar ---- */
+  var progressFill = document.querySelector('.page-progress-fill');
+  if (progressFill) {
+    function updatePageProgress() {
+      var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+      progressFill.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updatePageProgress, { passive: true });
+    updatePageProgress();
+  }
+
+  /* ---- Scroll Reveal (all variants) ---- */
+  var revEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   if ('IntersectionObserver' in window && revEls.length) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     revEls.forEach(function (el) { io.observe(el); });
   } else {
     revEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ---- Parallax Backgrounds ---- */
+  var parallaxBgs = document.querySelectorAll('.parallax-section__bg');
+  if (parallaxBgs.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    function updateParallax() {
+      parallaxBgs.forEach(function (bg) {
+        var section = bg.parentElement;
+        var rect = section.getBoundingClientRect();
+        var viewH = window.innerHeight;
+        if (rect.bottom < 0 || rect.top > viewH) return;
+        var progress = (viewH - rect.top) / (viewH + rect.height);
+        var offset = (progress - 0.5) * 80;
+        bg.style.transform = 'translateY(' + offset + 'px)';
+      });
+    }
+    window.addEventListener('scroll', updateParallax, { passive: true });
+    updateParallax();
   }
 
   /* ---- Galerie-Filter ---- */

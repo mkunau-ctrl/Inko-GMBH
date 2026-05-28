@@ -39,6 +39,7 @@
         </button>
       </div>
     </div>
+    <div class="page-progress"><div class="page-progress-fill"></div></div>
   </header>
 
   <!-- Mobile Drawer Backdrop -->
@@ -75,7 +76,7 @@
   <main>
     <!-- Hero -->
     <section class="hero">
-      <div class="hero__bg" style="background-image:url('images/galerie/Galerie-01.jpg')"></div>
+      <div class="hero__bg parallax-section__bg" style="background-image:url('images/galerie/Galerie-01.jpg')"></div>
       <div class="hero__overlay"></div>
       <div class="container">
         <div class="hero__content">
@@ -94,10 +95,10 @@
     <div class="stats-band">
       <div class="container">
         <div class="grid grid--4">
-          <div class="stat"><div class="stat__num">20+</div><div class="stat__label">Jahre Erfahrung</div></div>
-          <div class="stat"><div class="stat__num">6</div><div class="stat__label">Materialwelten</div></div>
-          <div class="stat"><div class="stat__num">2</div><div class="stat__label">Ausstellungen</div></div>
-          <div class="stat"><div class="stat__num">100%</div><div class="stat__label">Qualitätskontrolle</div></div>
+          <div class="stat reveal"><div class="stat__num">20+</div><div class="stat__label">Jahre Erfahrung</div></div>
+          <div class="stat reveal reveal-delay-1"><div class="stat__num">6</div><div class="stat__label">Materialwelten</div></div>
+          <div class="stat reveal reveal-delay-2"><div class="stat__num">2</div><div class="stat__label">Ausstellungen</div></div>
+          <div class="stat reveal reveal-delay-3"><div class="stat__num">100%</div><div class="stat__label">Qualitätskontrolle</div></div>
         </div>
       </div>
     </div>
@@ -113,7 +114,7 @@
         </div>
         <div class="grid grid--3">
 
-          <article class="card reveal">
+          <article class="card reveal-scale">
             <div class="card__img">
               <img src="images/galerie/Galerie-01.jpg" alt="Teakholz Sitzgruppe im Garten" loading="lazy" />
             </div>
@@ -125,7 +126,7 @@
             </div>
           </article>
 
-          <article class="card reveal">
+          <article class="card reveal-scale reveal-delay-1">
             <div class="card__img">
               <img src="images/galerie/Gruppe-Rocco-bronze.jpg" alt="Alu-Guss Gruppe Rocco in Bronze" loading="lazy" />
             </div>
@@ -137,7 +138,7 @@
             </div>
           </article>
 
-          <article class="card reveal">
+          <article class="card reveal-scale reveal-delay-2">
             <div class="card__img">
               <img src="images/galerie/Frisco-weiss-Abacus.jpg" alt="Frisco Garnitur in Weiss mit Abacus" loading="lazy" />
             </div>
@@ -160,16 +161,30 @@
     <section class="section section--alt">
       <div class="container">
         <div class="split">
-          <div class="split__img reveal">
+          <div class="split__img reveal-left">
             <img src="images/galerie/Galerie-08.jpg" alt="Gartenmöbel Ausstellung Inko GmbH" loading="lazy" />
           </div>
-          <div class="split__text reveal">
+          <div class="split__text reveal-right">
             <span class="eyebrow">Über Inko GmbH</span>
             <h2>Mit uns sind Sie auf der sonnigen Seite</h2>
             <p>Seit über 20 Jahren sind wir einer der größten Gartenmöbelanbieter der Region. Unser Erfolgsgeheimnis: ein intelligentes Logistiksystem, konsequente Qualitätskontrolle und eine ausgewogene Preisstruktur.</p>
             <p>An unseren zwei Ausstellungsstandorten in Lemgo und Hille-Hartum können Sie unsere Kollektionen persönlich erleben und sich kompetent beraten lassen.</p>
             <a href="ueber-uns.html" class="btn btn--outline-green">Unsere Geschichte</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parallax Showcase -->
+    <section class="parallax-section">
+      <div class="parallax-section__bg" style="background-image:url('images/galerie/Galerie-09.jpg')"></div>
+      <div class="parallax-section__overlay" style="background:linear-gradient(135deg,rgba(20,40,15,0.82) 0%,rgba(20,40,15,0.55) 100%)"></div>
+      <div class="container">
+        <div class="parallax-content" style="padding-block:clamp(3.5rem,8vw,6rem);text-align:center;color:#fff;max-width:720px;margin-inline:auto;">
+          <span class="hero__eyebrow reveal" style="margin-bottom:1.25rem;display:inline-block;">Qualität, die man spürt</span>
+          <h2 class="reveal reveal-delay-1" style="color:#fff;margin-bottom:1.1rem;text-shadow:0 2px 12px rgba(0,0,0,0.4);">Zwei Ausstellungen – ein Anspruch</h2>
+          <p class="reveal reveal-delay-2" style="color:rgba(255,255,255,0.88);font-size:1.08rem;margin-bottom:2rem;">Besuchen Sie unsere Ausstellungen in Lemgo und Hille-Hartum und erleben Sie hochwertige Gartenmöbel zum Anfassen – persönliche Beratung inklusive.</p>
+          <a href="kontakt.html" class="btn btn--primary reveal reveal-delay-3">Jetzt Standort finden</a>
         </div>
       </div>
     </section>
@@ -226,16 +241,16 @@
           <h2>Unsere Gartenmöbel im Blick</h2>
           <div class="divider"><span>✦</span></div>
         </div>
-        <div class="gallery-grid reveal">
-          <div class="gallery-item">
+        <div class="gallery-grid">
+          <div class="gallery-item reveal-scale">
             <img src="images/galerie/Galerie-03.jpg" alt="Gartenmöbel Impression" loading="lazy" />
             <div class="gallery-item__cap">Gartenidylle</div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item reveal-scale reveal-delay-1">
             <img src="images/galerie/Galerie-04.jpg" alt="Gartenmöbel Impression" loading="lazy" />
             <div class="gallery-item__cap">Elegante Sitzgruppe</div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item reveal-scale reveal-delay-2">
             <img src="images/galerie/Milieu-Leona.jpg" alt="Milieu Leona Kollektion" loading="lazy" />
             <div class="gallery-item__cap">Kollektion Leona</div>
           </div>
@@ -253,6 +268,22 @@
           <h2>Besuchen Sie unsere Ausstellungen</h2>
           <p>Erleben Sie unsere Gartenmöbel hautnah in Lemgo und Hille-Hartum. Unser Team berät Sie gerne persönlich.</p>
           <a href="kontakt.html" class="btn btn--primary">Standorte &amp; Kontakt</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parallax Teak Band -->
+    <section class="parallax-section">
+      <div class="parallax-section__bg" style="background-image:url('images/galerie/Galerie-10.jpg')"></div>
+      <div class="parallax-section__overlay" style="background:rgba(139,94,46,0.65)"></div>
+      <div class="container">
+        <div class="parallax-content" style="padding-block:clamp(3rem,7vw,5rem);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;">
+          <div class="reveal-left" style="color:#fff;flex:1;min-width:240px;">
+            <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#f0d070;margin-bottom:0.6rem;">Naturholz pur</span>
+            <h2 style="color:#fff;margin-bottom:0.6rem;text-shadow:0 2px 8px rgba(0,0,0,0.35);">Teak – für die Ewigkeit</h2>
+            <p style="color:rgba(255,255,255,0.88);max-width:460px;">Unser Teakholz stammt aus zertifizierten Nachhaltigkeitsprogrammen. Es verwittert edel und hält Generationen.</p>
+          </div>
+          <a href="produkte.html" class="btn btn--primary reveal-right" style="flex-shrink:0;">Teak-Kollektion ansehen</a>
         </div>
       </div>
     </section>
