@@ -94,28 +94,28 @@ body { padding-top: 0; }
   border-radius: 0 2px 2px 0;
 }
 
-/* Top Bar */
-.topbar {
-  background: #1b3a20;
-  color: rgba(255,255,255,0.9);
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  overflow: hidden;
-  height: 52px;
-  transition: height 0.5s ease, opacity 0.5s ease;
-  display: flex; align-items: center; justify-content: flex-end;
-  padding-inline: clamp(1.5rem, 5vw, 3.5rem);
-  gap: 2rem;
+/* Kontakt CTA Button in Navbar */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.4rem;
+  background: var(--gold);
+  color: var(--nav-green) !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  border: 2px solid var(--gold);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
 }
-.site-header.is-scrolled .topbar { height: 0; opacity: 0; }
-.topbar__link {
-  display: inline-flex; align-items: center; gap: 0.55rem;
-  color: rgba(255,255,255,0.9);
-  transition: color 0.3s ease;
-  font-size: 0.83rem;
+.nav-cta:hover {
+  background: #b58a16;
+  border-color: #b58a16;
+  color: var(--nav-green) !important;
+  transform: translateY(-1px);
 }
-.topbar__link:hover { color: #f0d070; }
-.topbar__sep { width: 1px; height: 18px; background: rgba(255,255,255,0.25); }
 
 /* Nav Bar */
 .nav-bar {
@@ -309,8 +309,8 @@ body { padding-top: 0; }
   flex-shrink: 0;
 }
 
-/* Header Spacer (height of fixed header) */
-.header-spacer { height: 100px; transition: height 0.5s ease; }
+/* Header Spacer — height set dynamically by JS */
+.header-spacer { height: 88px; transition: height 0.4s ease; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -779,17 +779,18 @@ body { padding-top: 0; }
 .parallax-section {
   position: relative;
   overflow: hidden;
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
 }
 .parallax-section__bg {
   position: absolute;
-  inset: -20% 0;
+  inset: -30% 0;     /* extra room top/bottom so shift is never out-of-bounds */
   background-size: cover;
   background-position: center;
   z-index: 0;
   will-change: transform;
+  transition: none;  /* no CSS transition — JS drives this per frame */
 }
 .parallax-section__overlay {
   position: absolute;
@@ -800,6 +801,7 @@ body { padding-top: 0; }
 .parallax-section > .parallax-content {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 /* ---------- Responsive ---------- */
@@ -809,6 +811,7 @@ body { padding-top: 0; }
 }
 @media (max-width: 1024px) {
   .nav-links { display: none; }
+  .nav-cta  { display: none; }   /* hidden on mobile – Kontakt is in the drawer */
   .nav-toggle { display: flex; }
   .nav-backdrop { display: block; pointer-events: none; }
   .nav-backdrop.is-open { pointer-events: auto; }
@@ -824,9 +827,7 @@ body { padding-top: 0; }
 @media (max-width: 640px) {
   .grid--2,.grid--3,.grid--4 { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2,1fr); }
-  .topbar__right { display: none; }
   .form-row { grid-template-columns: 1fr; }
   .hero { min-height: 65vh; }
   .footer__top { grid-template-columns: 1fr; }
-  .header__tagline { display: none; }
 }
