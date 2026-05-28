@@ -4,160 +4,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inko GmbH — Hochwertige Gartenmöbel aus Lemgo</title>
-  <meta name="description" content="Inko GmbH – einer der größten Gartenmöbelanbieter der Region. Hochwertige Gartenmöbel aus Teakholz, Aluminium, Beton, Edelstahl, Eisen und Geflecht. Qualität seit über 20 Jahren." />
+  <meta name="description" content="Inko GmbH – Gartenmöbel aus Teakholz, Aluminium, Beton, Edelstahl, Eisen und Geflecht. Qualität seit über 20 Jahren. Ausstellungen in Lemgo und Hille-Hartum." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ===== Header / Navigation ===== -->
-  <header class="header">
-    <nav class="nav container" aria-label="Hauptnavigation">
-      <a href="index.html" class="nav__logo">ink<span>O</span><small>Gartenmöbel</small></a>
-      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__inner">
+        <div class="topbar__left">
+          <span class="topbar__item">📞 <a href="tel:+4952611862 26">(05261) 18 62 26</a></span>
+          <span class="topbar__item">✉ <a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></span>
+        </div>
+        <div class="topbar__right">
+          <span>Mo–Fr 8:30–18:00 Uhr &nbsp;|&nbsp; Sa 9:30–14:00 Uhr</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header mit Logo -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Inko GmbH – Startseite">
+        <img src="images/logo.png" alt="inkO GmbH Logo" />
+      </a>
+      <div class="header__tagline">
+        <strong>Qualität seit über 20 Jahren</strong>
+        Einer der größten Gartenmöbelanbieter der Region
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav" aria-label="Hauptnavigation">
+    <div class="container nav__inner">
+      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav__menu" id="nav-menu">
+      <ul class="nav__menu">
         <li><a class="nav__link is-active" href="index.html">Home</a></li>
         <li><a class="nav__link" href="produkte.html">Produkte</a></li>
         <li><a class="nav__link" href="service.html">Service</a></li>
         <li><a class="nav__link" href="galerie.html">Galerie</a></li>
         <li><a class="nav__link" href="grillcorner.html">Grill Corner</a></li>
         <li><a class="nav__link" href="ueber-uns.html">Über uns</a></li>
-        <li><a class="nav__cta" href="kontakt.html">Kontakt</a></li>
+        <li><a class="nav__link" href="kontakt.html">Kontakt</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <main>
-    <!-- ===== Hero ===== -->
+    <!-- Hero -->
     <section class="hero">
-      <div class="container hero__inner">
-        <span class="hero__eyebrow">Qualität seit über 20 Jahren</span>
-        <h1>Gartenmöbel, die Generationen überdauern</h1>
-        <p>Als einer der größten Gartenmöbelanbieter der Region vereinen wir handverlesene Qualität, faire Preise und ein intelligentes Logistiksystem – für den Fachhandel und für Sie.</p>
-        <div class="hero__actions">
-          <a href="produkte.html" class="btn btn--primary">Produkte entdecken</a>
-          <a href="kontakt.html" class="btn btn--outline">Kontakt aufnehmen</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Stats ===== -->
-    <section class="section section--alt">
+      <div class="hero__bg" style="background-image:url('images/galerie/Galerie-01.jpg')"></div>
+      <div class="hero__overlay"></div>
       <div class="container">
-        <div class="stats">
-          <div class="stat reveal">
-            <div class="stat__num">20+</div>
-            <div class="stat__label">Jahre Erfahrung</div>
-          </div>
-          <div class="stat reveal">
-            <div class="stat__num">6</div>
-            <div class="stat__label">Materialwelten</div>
-          </div>
-          <div class="stat reveal">
-            <div class="stat__num">2</div>
-            <div class="stat__label">Ausstellungen</div>
-          </div>
-          <div class="stat reveal">
-            <div class="stat__num">100%</div>
-            <div class="stat__label">Qualitätskontrolle</div>
+        <div class="hero__content">
+          <span class="hero__eyebrow">Qualität seit über 20 Jahren</span>
+          <h1>Gartenmöbel für Generationen</h1>
+          <p>Als einer der größten Gartenmöbelanbieter der Region bieten wir Ihnen handverlesene Kollektionen aus Teakholz, Aluminium, Geflecht und mehr – zu fairen Preisen.</p>
+          <div class="hero__actions">
+            <a href="produkte.html" class="btn btn--primary">Produkte entdecken</a>
+            <a href="kontakt.html" class="btn btn--white">Kontakt aufnehmen</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Produkt-Highlights ===== -->
+    <!-- Stats Band -->
+    <div class="stats-band">
+      <div class="container">
+        <div class="grid grid--4">
+          <div class="stat"><div class="stat__num">20+</div><div class="stat__label">Jahre Erfahrung</div></div>
+          <div class="stat"><div class="stat__num">6</div><div class="stat__label">Materialwelten</div></div>
+          <div class="stat"><div class="stat__num">2</div><div class="stat__label">Ausstellungen</div></div>
+          <div class="stat"><div class="stat__num">100%</div><div class="stat__label">Qualitätskontrolle</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produkt-Highlights -->
     <section class="section">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="section__eyebrow">Unsere Materialwelten</span>
-          <h2>Für jeden Garten das passende Material</h2>
-          <p>Von warmem Teakholz bis zu wetterfestem Aluminium – entdecken Sie unsere sorgfältig ausgewählten Kollektionen.</p>
+        <div class="sec-head reveal">
+          <span class="eyebrow">Unsere Kollektionen</span>
+          <h2>Für jeden Garten das richtige Material</h2>
+          <div class="divider"><span>✦</span></div>
+          <p>Von warmem Teakholz über edles Alu-Guss bis zu komfortablem Geflecht – entdecken Sie unsere sorgfältig zusammengestellten Kollektionen.</p>
         </div>
         <div class="grid grid--3">
 
           <article class="card reveal">
-            <div class="card__media media--teak"><span>Teakholz</span></div>
+            <div class="card__img">
+              <img src="images/galerie/Galerie-01.jpg" alt="Teakholz Sitzgruppe im Garten" loading="lazy" />
+            </div>
             <div class="card__body">
+              <span class="card__tag">Naturmaterial</span>
               <h3>Teakholz</h3>
-              <p>Edles Hartholz mit natürlicher Witterungsbeständigkeit – zeitlos schön und langlebig.</p>
+              <p>Edles tropisches Hartholz mit natürlicher Witterungsbeständigkeit – zeitlos schön und langlebig.</p>
               <a href="produkte.html" class="card__link">Mehr erfahren</a>
             </div>
           </article>
 
           <article class="card reveal">
-            <div class="card__media media--alu"><span>Aluminium</span></div>
+            <div class="card__img">
+              <img src="images/galerie/Gruppe-Rocco-bronze.jpg" alt="Alu-Guss Gruppe Rocco in Bronze" loading="lazy" />
+            </div>
             <div class="card__body">
+              <span class="card__tag">Metall</span>
               <h3>Aluminium &amp; Alu-Guss</h3>
-              <p>Leicht, rostfrei und pflegeleicht – modernes Design für jeden Außenbereich.</p>
+              <p>Leicht, rostfrei, pflegeleicht. Klassische Alu-Guss-Formen und modernes Strangpress-Design.</p>
               <a href="produkte.html" class="card__link">Mehr erfahren</a>
             </div>
           </article>
 
           <article class="card reveal">
-            <div class="card__media media--geflecht"><span>Geflecht</span></div>
+            <div class="card__img">
+              <img src="images/galerie/Frisco-weiss-Abacus.jpg" alt="Frisco Garnitur in Weiss mit Abacus" loading="lazy" />
+            </div>
             <div class="card__body">
-              <h3>Geflecht</h3>
-              <p>Hochwertiges Polyrattan-Geflecht – komfortabel, UV-beständig und elegant.</p>
+              <span class="card__tag">Komfort</span>
+              <h3>Geflecht &amp; Mischformen</h3>
+              <p>Hochwertiges Polyrattan kombiniert mit Holz oder Metall – UV-beständig und herrlich bequem.</p>
               <a href="produkte.html" class="card__link">Mehr erfahren</a>
             </div>
           </article>
 
         </div>
-        <div style="text-align:center; margin-top:2.5rem;" class="reveal">
-          <a href="produkte.html" class="btn btn--ghost">Alle Materialien ansehen</a>
+        <div style="text-align:center;margin-top:2rem;" class="reveal">
+          <a href="produkte.html" class="btn btn--outline-green">Alle Materialwelten ansehen</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== Über-uns-Teaser (Split) ===== -->
+    <!-- Über uns Split -->
     <section class="section section--alt">
       <div class="container">
         <div class="split">
-          <div class="split__media media--forest reveal" role="img" aria-label="Ausstellung der Inko GmbH"></div>
-          <div class="split__content reveal">
-            <span class="section__eyebrow">Über Inko</span>
-            <h2>Qualität, die man spürt</h2>
-            <p>Seit über zwei Jahrzehnten beliefern wir den Fachhandel mit hochwertigen Gartenmöbeln. Unser Anspruch: ausgewogene Preisstruktur, geprüfte Qualität und ein Service, auf den Sie sich verlassen können.</p>
-            <p>An zwei Standorten in Lemgo und Hille-Hartum präsentieren wir unsere Kollektionen zum Anfassen und Erleben.</p>
-            <a href="ueber-uns.html" class="btn btn--ghost">Unsere Geschichte</a>
+          <div class="split__img reveal">
+            <img src="images/galerie/Galerie-08.jpg" alt="Gartenmöbel Ausstellung Inko GmbH" loading="lazy" />
+          </div>
+          <div class="split__text reveal">
+            <span class="eyebrow">Über Inko GmbH</span>
+            <h2>Mit uns sind Sie auf der sonnigen Seite</h2>
+            <p>Seit über 20 Jahren sind wir einer der größten Gartenmöbelanbieter der Region. Unser Erfolgsgeheimnis: ein intelligentes Logistiksystem, konsequente Qualitätskontrolle und eine ausgewogene Preisstruktur.</p>
+            <p>An unseren zwei Ausstellungsstandorten in Lemgo und Hille-Hartum können Sie unsere Kollektionen persönlich erleben und sich kompetent beraten lassen.</p>
+            <a href="ueber-uns.html" class="btn btn--outline-green">Unsere Geschichte</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Service-Highlights ===== -->
+    <!-- Service Features -->
     <section class="section">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="section__eyebrow">Unser Versprechen</span>
-          <h2>Mehr als nur Möbel</h2>
+        <div class="sec-head reveal">
+          <span class="eyebrow">Unser Versprechen</span>
+          <h2>Warum Inko GmbH?</h2>
+          <div class="divider"><span>✦</span></div>
         </div>
-        <div class="grid grid--3">
-
-          <div class="feature reveal">
-            <div class="feature__icon">✓</div>
-            <h3>Geprüfte Qualität</h3>
-            <p>Jedes Produkt durchläuft unsere sorgfältige Qualitätskontrolle, bevor es zu Ihnen gelangt.</p>
+        <div class="grid grid--4">
+          <div class="feature-box reveal">
+            <div class="feature-box__icon">🌿</div>
+            <h3>20+ Jahre Erfahrung</h3>
+            <p>Unser langjähriges Know-how im Gartenmöbelbereich kommt Ihnen direkt zugute.</p>
           </div>
-
-          <div class="feature reveal">
-            <div class="feature__icon">⚙</div>
+          <div class="feature-box reveal">
+            <div class="feature-box__icon">✅</div>
+            <h3>Qualitätskontrolle</h3>
+            <p>Jedes Produkt wird sorgfältig geprüft, bevor es unsere Ausstellung erreicht.</p>
+          </div>
+          <div class="feature-box reveal">
+            <div class="feature-box__icon">🚚</div>
             <h3>Intelligente Logistik</h3>
-            <p>Unser durchdachtes Logistiksystem sorgt für zuverlässige und schnelle Zulieferung.</p>
+            <p>Zuverlässige Zulieferung dank ausgeklügeltem Logistiksystem für den Fachhandel.</p>
           </div>
-
-          <div class="feature reveal">
-            <div class="feature__icon">♥</div>
+          <div class="feature-box reveal">
+            <div class="feature-box__icon">💶</div>
             <h3>Faire Preise</h3>
-            <p>Eine ausgewogene Preisstruktur – hochwertige Möbel für ein attraktives Preis-Leistungs-Verhältnis.</p>
+            <p>Ausgewogene Preisstruktur – erstklassige Qualität muss nicht unbezahlbar sein.</p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ===== CTA-Band ===== -->
+    <!-- Galerie-Vorschau -->
+    <section class="section section--green">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Impressionen</span>
+          <h2>Unsere Gartenmöbel im Blick</h2>
+          <div class="divider"><span>✦</span></div>
+        </div>
+        <div class="gallery-grid reveal">
+          <div class="gallery-item">
+            <img src="images/galerie/Galerie-03.jpg" alt="Gartenmöbel Impression" loading="lazy" />
+            <div class="gallery-item__cap">Gartenidylle</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/galerie/Galerie-04.jpg" alt="Gartenmöbel Impression" loading="lazy" />
+            <div class="gallery-item__cap">Elegante Sitzgruppe</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/galerie/Milieu-Leona.jpg" alt="Milieu Leona Kollektion" loading="lazy" />
+            <div class="gallery-item__cap">Kollektion Leona</div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem;" class="reveal">
+          <a href="galerie.html" class="btn btn--outline-green">Zur vollständigen Galerie</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
     <section class="section">
       <div class="container">
         <div class="cta-band reveal">
@@ -169,13 +230,13 @@
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__logo">ink<span>O</span> GmbH</div>
-          <p>Einer der größten Gartenmöbelanbieter der Region. Hochwertige Gartenmöbel für den Fachhandel – Qualität seit über 20 Jahren.</p>
+      <div class="footer__top">
+        <div class="footer__about">
+          <div class="footer__logo"><img src="images/logo.png" alt="inkO GmbH" /></div>
+          <p>Einer der größten Gartenmöbelanbieter der Region. Hochwertige Kollektionen aus Teakholz, Aluminium, Beton, Edelstahl, Eisen und Geflecht – Qualität seit über 20 Jahren.</p>
         </div>
         <div>
           <h4>Navigation</h4>
@@ -184,29 +245,33 @@
             <li><a href="produkte.html">Produkte</a></li>
             <li><a href="service.html">Service</a></li>
             <li><a href="galerie.html">Galerie</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Mehr</h4>
-          <ul class="footer__list">
             <li><a href="grillcorner.html">Grill Corner</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </div>
         <div>
-          <h4>Hauptsitz Lemgo</h4>
+          <h4>Lemgo</h4>
           <ul class="footer__list">
             <li>Lagesche Straße 10-12</li>
             <li>32657 Lemgo</li>
             <li><a href="tel:+49526118 6226">(05261) 18 62 26</a></li>
+            <li>Mo–Fr 8:30–18:00</li>
+            <li>Sa 9:30–14:00</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hille-Hartum</h4>
+          <ul class="footer__list">
+            <li>Mindener Straße 457</li>
+            <li>32479 Hille-Hartum</li>
+            <li><a href="tel:+4957139 85622">(0571) 39 85 622</a></li>
             <li><a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
         <span>&copy; <span data-year>2026</span> Inko GmbH. Alle Rechte vorbehalten.</span>
-        <span><a href="kontakt.html">Impressum</a> &nbsp;·&nbsp; <a href="kontakt.html">Datenschutz</a></span>
+        <span><a href="kontakt.html">Impressum</a> &nbsp;·&nbsp; <a href="kontakt.html">Datenschutz</a> &nbsp;·&nbsp; <a href="kontakt.html">AGB</a></span>
       </div>
     </div>
   </footer>

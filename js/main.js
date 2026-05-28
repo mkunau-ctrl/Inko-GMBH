@@ -1,24 +1,25 @@
-/* =========================================================
-   Inko GmbH — Gemeinsames JavaScript
-   Navigation, Scroll-Reveal, Galerie-Filter, Kontaktformular
-   ========================================================= */
+/* Inko GmbH — gemeinsames JS */
 (function () {
   'use strict';
 
-  /* ---------- Mobile Navigation ---------- */
+  /* ---- Mobile Navigation ---- */
   var toggle = document.querySelector('.nav__toggle');
-  var menu = document.querySelector('.nav__menu');
+  var menu   = document.querySelector('.nav__menu');
+  var mainNav = document.querySelector('.main-nav');
 
-  if (toggle && menu) {
+  if (toggle && menu && mainNav) {
+    var setMenuTop = function () {
+      var h = mainNav.getBoundingClientRect().height;
+      menu.style.top = mainNav.offsetTop + h + 'px';
+    };
     toggle.addEventListener('click', function () {
       var open = menu.classList.toggle('is-open');
       toggle.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
+      if (open) setMenuTop();
     });
-
-    // Menü schließen, wenn ein Link geklickt wird (Mobile)
-    menu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
+    menu.querySelectorAll('a').forEach(function (l) {
+      l.addEventListener('click', function () {
         menu.classList.remove('is-open');
         toggle.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
@@ -26,72 +27,75 @@
     });
   }
 
-  /* ---------- Scroll-Reveal Animation ---------- */
-  var revealEls = document.querySelectorAll('.reveal');
-
-  if ('IntersectionObserver' in window && revealEls.length) {
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-    );
-    revealEls.forEach(function (el) { observer.observe(el); });
+  /* ---- Scroll Reveal ---- */
+  var revEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revEls.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    revEls.forEach(function (el) { io.observe(el); });
   } else {
-    // Fallback: alles sichtbar
-    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    revEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  /* ---------- Galerie-Filter ---------- */
+  /* ---- Galerie-Filter ---- */
   var filterBtns = document.querySelectorAll('.filter__btn');
-  var galleryItems = document.querySelectorAll('.gallery__item');
-
-  if (filterBtns.length && galleryItems.length) {
+  var galItems   = document.querySelectorAll('.gallery-item');
+  if (filterBtns.length && galItems.length) {
     filterBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
         var filter = btn.getAttribute('data-filter');
-
         filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
         btn.classList.add('is-active');
-
-        galleryItems.forEach(function (item) {
+        galItems.forEach(function (item) {
           var cat = item.getAttribute('data-category');
-          var show = filter === 'alle' || cat === filter;
-          item.classList.toggle('is-hidden', !show);
+          item.classList.toggle('is-hidden', filter !== 'alle' && cat !== filter);
         });
       });
     });
   }
 
-  /* ---------- Kontaktformular (Demo-Validierung) ---------- */
-  var form = document.querySelector('.form');
-  var status = document.querySelector('.form__status');
+  /* ---- Lightbox ---- */
+  var lightbox = document.querySelector('.lightbox');
+  var lbImg    = document.querySelector('.lightbox__img');
+  var lbClose  = document.querySelector('.lightbox__close');
+  if (lightbox && lbImg) {
+    galItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        var src = item.querySelector('img') ? item.querySelector('img').src : '';
+        if (!src) return;
+        lbImg.src = src;
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function closeLB() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+    if (lbClose) lbClose.addEventListener('click', closeLB);
+    lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLB(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLB(); });
+  }
 
+  /* ---- Kontaktformular ---- */
+  var form   = document.querySelector('.form');
+  var status = document.querySelector('.form__status');
   if (form && status) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      status.textContent =
-        'Vielen Dank für Ihre Nachricht! Wir melden uns zeitnah bei Ihnen.';
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      status.textContent = 'Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.';
       status.classList.add('is-visible');
       form.reset();
-      setTimeout(function () {
-        status.classList.remove('is-visible');
-      }, 6000);
+      setTimeout(function () { status.classList.remove('is-visible'); }, 6000);
     });
   }
 
-  /* ---------- Aktuelles Jahr im Footer ---------- */
-  var yearEl = document.querySelector('[data-year]');
-  if (yearEl) {
-    yearEl.textContent = String(new Date().getFullYear());
-  }
+  /* ---- Jahreszahl ---- */
+  var yr = document.querySelector('[data-year]');
+  if (yr) yr.textContent = String(new Date().getFullYear());
 })();

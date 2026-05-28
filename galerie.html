@@ -4,122 +4,179 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galerie — Inko GmbH | Gartenmöbel-Impressionen</title>
-  <meta name="description" content="Impressionen unserer Gartenmöbel – filterbar nach Material: Teakholz, Aluminium, Beton, Edelstahl, Eisen und Geflecht." />
+  <meta name="description" content="Bildergalerie der Inko GmbH: Teakholz, Aluminium-Guss, Geflecht und mehr – echte Fotos unserer Gartenmöbel-Kollektionen." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ===== Header / Navigation ===== -->
-  <header class="header">
-    <nav class="nav container" aria-label="Hauptnavigation">
-      <a href="index.html" class="nav__logo">ink<span>O</span><small>Gartenmöbel</small></a>
-      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__menu" id="nav-menu">
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__inner">
+        <div class="topbar__left">
+          <span class="topbar__item">📞 <a href="tel:+4952611862 26">(05261) 18 62 26</a></span>
+          <span class="topbar__item">✉ <a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></span>
+        </div>
+        <div class="topbar__right">
+          <span>Mo–Fr 8:30–18:00 Uhr &nbsp;|&nbsp; Sa 9:30–14:00 Uhr</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo"><img src="images/logo.png" alt="inkO GmbH Logo" /></a>
+      <div class="header__tagline"><strong>Qualität seit über 20 Jahren</strong>Einer der größten Gartenmöbelanbieter der Region</div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav" aria-label="Hauptnavigation">
+    <div class="container nav__inner">
+      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__menu">
         <li><a class="nav__link" href="index.html">Home</a></li>
         <li><a class="nav__link" href="produkte.html">Produkte</a></li>
         <li><a class="nav__link" href="service.html">Service</a></li>
         <li><a class="nav__link is-active" href="galerie.html">Galerie</a></li>
         <li><a class="nav__link" href="grillcorner.html">Grill Corner</a></li>
         <li><a class="nav__link" href="ueber-uns.html">Über uns</a></li>
-        <li><a class="nav__cta" href="kontakt.html">Kontakt</a></li>
+        <li><a class="nav__link" href="kontakt.html">Kontakt</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <main>
-    <!-- ===== Page Hero ===== -->
+    <!-- Page Hero -->
     <section class="page-hero">
       <div class="container">
-        <nav class="breadcrumb" aria-label="Brotkrumen"><a href="index.html">Home</a> / Galerie</nav>
+        <nav class="breadcrumb"><a href="index.html">Home</a> / Galerie</nav>
         <h1>Galerie</h1>
-        <p>Lassen Sie sich inspirieren. Filtern Sie unsere Impressionen nach Material und entdecken Sie die Vielfalt unserer Kollektionen.</p>
+        <p>Entdecken Sie unsere Gartenmöbel in stimmungsvollen Aufnahmen. Klicken Sie auf ein Bild für die Großansicht.</p>
       </div>
     </section>
 
-    <!-- ===== Galerie mit Filter ===== -->
+    <!-- Galerie mit Filter -->
     <section class="section">
       <div class="container">
-
-        <div class="filter reveal" role="group" aria-label="Galerie filtern">
+        <div class="filter reveal">
           <button class="filter__btn is-active" data-filter="alle">Alle</button>
           <button class="filter__btn" data-filter="teak">Teakholz</button>
           <button class="filter__btn" data-filter="alu">Aluminium</button>
-          <button class="filter__btn" data-filter="beton">Beton</button>
-          <button class="filter__btn" data-filter="edelstahl">Edelstahl</button>
-          <button class="filter__btn" data-filter="eisen">Eisen</button>
-          <button class="filter__btn" data-filter="geflecht">Geflecht</button>
+          <button class="filter__btn" data-filter="kombi">Kombinationen</button>
         </div>
 
-        <div class="gallery reveal">
-          <div class="gallery__item media--teak"     data-category="teak"      role="img" aria-label="Teakholz Sitzgruppe"><span>Teak Sitzgruppe</span></div>
-          <div class="gallery__item media--alu"      data-category="alu"       role="img" aria-label="Aluminium Loungeset"><span>Alu Loungeset</span></div>
-          <div class="gallery__item media--geflecht" data-category="geflecht"  role="img" aria-label="Geflecht Lounge"><span>Geflecht Lounge</span></div>
-          <div class="gallery__item media--beton"    data-category="beton"     role="img" aria-label="Beton Esstisch"><span>Beton Esstisch</span></div>
-          <div class="gallery__item media--edelstahl" data-category="edelstahl" role="img" aria-label="Edelstahl Tischset"><span>Edelstahl Tisch</span></div>
-          <div class="gallery__item media--eisen"    data-category="eisen"     role="img" aria-label="Schmiedeeisen Bistro"><span>Eisen Bistro</span></div>
-          <div class="gallery__item media--teak"     data-category="teak"      role="img" aria-label="Teakholz Liege"><span>Teak Liege</span></div>
-          <div class="gallery__item media--alu"      data-category="alu"       role="img" aria-label="Aluminium Esstisch"><span>Alu Esstisch</span></div>
-          <div class="gallery__item media--geflecht" data-category="geflecht"  role="img" aria-label="Geflecht Sessel"><span>Geflecht Sessel</span></div>
-          <div class="gallery__item media--beton"    data-category="beton"     role="img" aria-label="Beton Gartenbank"><span>Beton Bank</span></div>
-          <div class="gallery__item media--edelstahl" data-category="edelstahl" role="img" aria-label="Edelstahl Lounge"><span>Edelstahl Lounge</span></div>
-          <div class="gallery__item media--eisen"    data-category="eisen"     role="img" aria-label="Eisen Gartenstuhl"><span>Eisen Stuhl</span></div>
-        </div>
+        <div class="gallery-grid reveal">
 
+          <div class="gallery-item" data-category="teak">
+            <img src="images/galerie/Galerie-01.jpg" alt="Teakholz Sitzgruppe mit Bank" loading="lazy" />
+            <div class="gallery-item__cap">Teak Sitzgruppe</div>
+          </div>
+
+          <div class="gallery-item" data-category="alu">
+            <img src="images/galerie/Gruppe-Rocco-bronze.jpg" alt="Gruppe Rocco in Bronze – Alu-Guss" loading="lazy" />
+            <div class="gallery-item__cap">Rocco Bronze – Alu-Guss</div>
+          </div>
+
+          <div class="gallery-item" data-category="kombi">
+            <img src="images/galerie/Frisco-weiss-Abacus.jpg" alt="Frisco weiss mit Abacus Tisch" loading="lazy" />
+            <div class="gallery-item__cap">Frisco Weiss / Abacus</div>
+          </div>
+
+          <div class="gallery-item" data-category="teak">
+            <img src="images/galerie/Galerie-03.jpg" alt="Teakholz Gartenmöbel" loading="lazy" />
+            <div class="gallery-item__cap">Teak Kollektion</div>
+          </div>
+
+          <div class="gallery-item" data-category="alu">
+            <img src="images/galerie/Galerie-04.jpg" alt="Gartenmöbel Impression" loading="lazy" />
+            <div class="gallery-item__cap">Aluminium Impression</div>
+          </div>
+
+          <div class="gallery-item" data-category="kombi">
+            <img src="images/galerie/Galerie-05.jpg" alt="Gartenmöbel Kombination" loading="lazy" />
+            <div class="gallery-item__cap">Design Kombination</div>
+          </div>
+
+          <div class="gallery-item" data-category="teak">
+            <img src="images/galerie/Galerie-06.jpg" alt="Teakholz Detail" loading="lazy" />
+            <div class="gallery-item__cap">Teak Detail</div>
+          </div>
+
+          <div class="gallery-item" data-category="alu">
+            <img src="images/galerie/Galerie-07.jpg" alt="Aluminium Sitzgruppe" loading="lazy" />
+            <div class="gallery-item__cap">Aluminium Sitzgruppe</div>
+          </div>
+
+          <div class="gallery-item" data-category="kombi">
+            <img src="images/galerie/Galerie-08.jpg" alt="Gartenmöbel Ausstellung" loading="lazy" />
+            <div class="gallery-item__cap">Ausstellung Lemgo</div>
+          </div>
+
+          <div class="gallery-item" data-category="teak">
+            <img src="images/galerie/Galerie-10.jpg" alt="Teakholz Lounge" loading="lazy" />
+            <div class="gallery-item__cap">Teak Lounge</div>
+          </div>
+
+          <div class="gallery-item" data-category="alu">
+            <img src="images/galerie/Galerie-11.jpg" alt="Alu Garnitur" loading="lazy" />
+            <div class="gallery-item__cap">Aluminium Garnitur</div>
+          </div>
+
+          <div class="gallery-item" data-category="kombi">
+            <img src="images/galerie/Milieu-Leona.jpg" alt="Milieu Leona Kollektion" loading="lazy" />
+            <div class="gallery-item__cap">Kollektion Leona</div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- ===== CTA-Band ===== -->
+    <!-- CTA -->
     <section class="section section--alt">
       <div class="container">
         <div class="cta-band reveal">
-          <h2>Ihr Favorit ist dabei?</h2>
-          <p>Besuchen Sie unsere Ausstellungen in Lemgo oder Hille-Hartum und erleben Sie unsere Möbel live.</p>
-          <a href="kontakt.html" class="btn btn--primary">Standorte ansehen</a>
+          <h2>Ihr Lieblingsmöbel ist dabei?</h2>
+          <p>Besuchen Sie unsere Ausstellungen in Lemgo oder Hille-Hartum und erleben Sie die Möbel live.</p>
+          <a href="kontakt.html" class="btn btn--primary">Zu den Standorten</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
+  <!-- Lightbox -->
+  <div class="lightbox" role="dialog" aria-label="Bildansicht">
+    <button class="lightbox__close" aria-label="Schließen">&times;</button>
+    <img class="lightbox__img" src="" alt="Galerie Großansicht" />
+  </div>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__logo">ink<span>O</span> GmbH</div>
-          <p>Einer der größten Gartenmöbelanbieter der Region. Hochwertige Gartenmöbel für den Fachhandel – Qualität seit über 20 Jahren.</p>
+      <div class="footer__top">
+        <div class="footer__about">
+          <div class="footer__logo"><img src="images/logo.png" alt="inkO GmbH" /></div>
+          <p>Hochwertige Gartenmöbel aus Teakholz, Aluminium, Beton, Edelstahl, Eisen und Geflecht – Qualität seit über 20 Jahren.</p>
         </div>
-        <div>
-          <h4>Navigation</h4>
+        <div><h4>Navigation</h4>
           <ul class="footer__list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="produkte.html">Produkte</a></li>
-            <li><a href="service.html">Service</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="index.html">Home</a></li><li><a href="produkte.html">Produkte</a></li>
+            <li><a href="service.html">Service</a></li><li><a href="galerie.html">Galerie</a></li>
+            <li><a href="grillcorner.html">Grill Corner</a></li><li><a href="ueber-uns.html">Über uns</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Mehr</h4>
-          <ul class="footer__list">
-            <li><a href="grillcorner.html">Grill Corner</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
+        <div><h4>Lemgo</h4>
+          <ul class="footer__list"><li>Lagesche Straße 10-12</li><li>32657 Lemgo</li><li><a href="tel:+49526118 6226">(05261) 18 62 26</a></li><li>Mo–Fr 8:30–18:00</li><li>Sa 9:30–14:00</li></ul>
         </div>
-        <div>
-          <h4>Hauptsitz Lemgo</h4>
-          <ul class="footer__list">
-            <li>Lagesche Straße 10-12</li>
-            <li>32657 Lemgo</li>
-            <li><a href="tel:+49526118 6226">(05261) 18 62 26</a></li>
-            <li><a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></li>
-          </ul>
+        <div><h4>Hille-Hartum</h4>
+          <ul class="footer__list"><li>Mindener Straße 457</li><li>32479 Hille-Hartum</li><li><a href="tel:+4957139 85622">(0571) 39 85 622</a></li><li><a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></li></ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>&copy; <span data-year>2026</span> Inko GmbH. Alle Rechte vorbehalten.</span>
-        <span><a href="kontakt.html">Impressum</a> &nbsp;·&nbsp; <a href="kontakt.html">Datenschutz</a></span>
+        <span>&copy; <span data-year>2026</span> Inko GmbH.</span>
+        <span><a href="kontakt.html">Impressum</a> · <a href="kontakt.html">Datenschutz</a> · <a href="kontakt.html">AGB</a></span>
       </div>
     </div>
   </footer>

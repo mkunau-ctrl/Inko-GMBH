@@ -3,97 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakt — Inko GmbH | Standorte in Lemgo & Hille-Hartum</title>
-  <meta name="description" content="Kontaktieren Sie die Inko GmbH. Zwei Ausstellungen in Lemgo und Hille-Hartum. Telefon, E-Mail, Öffnungszeiten und Kontaktformular." />
+  <title>Kontakt — Inko GmbH | Lemgo &amp; Hille-Hartum</title>
+  <meta name="description" content="Kontaktieren Sie die Inko GmbH. Ausstellungen in Lemgo und Hille-Hartum. Telefon, E-Mail, Öffnungszeiten und Kontaktformular." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ===== Header / Navigation ===== -->
-  <header class="header">
-    <nav class="nav container" aria-label="Hauptnavigation">
-      <a href="index.html" class="nav__logo">ink<span>O</span><small>Gartenmöbel</small></a>
-      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__menu" id="nav-menu">
-        <li><a class="nav__link" href="index.html">Home</a></li>
-        <li><a class="nav__link" href="produkte.html">Produkte</a></li>
-        <li><a class="nav__link" href="service.html">Service</a></li>
-        <li><a class="nav__link" href="galerie.html">Galerie</a></li>
-        <li><a class="nav__link" href="grillcorner.html">Grill Corner</a></li>
-        <li><a class="nav__link" href="ueber-uns.html">Über uns</a></li>
-        <li><a class="nav__cta is-active" href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="topbar"><div class="container"><div class="topbar__inner">
+    <div class="topbar__left"><span class="topbar__item">📞 <a href="tel:+4952611862 26">(05261) 18 62 26</a></span><span class="topbar__item">✉ <a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></span></div>
+    <div class="topbar__right"><span>Mo–Fr 8:30–18:00 Uhr &nbsp;|&nbsp; Sa 9:30–14:00 Uhr</span></div>
+  </div></div></div>
+
+  <header class="site-header"><div class="container header__inner">
+    <a href="index.html" class="header__logo"><img src="images/logo.png" alt="inkO GmbH Logo" /></a>
+    <div class="header__tagline"><strong>Qualität seit über 20 Jahren</strong>Einer der größten Gartenmöbelanbieter der Region</div>
+  </div></header>
+
+  <nav class="main-nav" aria-label="Hauptnavigation"><div class="container nav__inner">
+    <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav__menu">
+      <li><a class="nav__link" href="index.html">Home</a></li>
+      <li><a class="nav__link" href="produkte.html">Produkte</a></li>
+      <li><a class="nav__link" href="service.html">Service</a></li>
+      <li><a class="nav__link" href="galerie.html">Galerie</a></li>
+      <li><a class="nav__link" href="grillcorner.html">Grill Corner</a></li>
+      <li><a class="nav__link" href="ueber-uns.html">Über uns</a></li>
+      <li><a class="nav__link is-active" href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div></nav>
 
   <main>
-    <!-- ===== Page Hero ===== -->
     <section class="page-hero">
       <div class="container">
-        <nav class="breadcrumb" aria-label="Brotkrumen"><a href="index.html">Home</a> / Kontakt</nav>
-        <h1>Kontakt</h1>
-        <p>Wir sind gerne für Sie da. Schreiben Sie uns, rufen Sie an oder besuchen Sie eine unserer Ausstellungen.</p>
+        <nav class="breadcrumb"><a href="index.html">Home</a> / Kontakt</nav>
+        <h1>Kontakt &amp; Standorte</h1>
+        <p>Wir sind gerne für Sie da – schreiben Sie uns, rufen Sie an oder besuchen Sie unsere Ausstellungen.</p>
       </div>
     </section>
 
-    <!-- ===== Kontakt-Grid: Infos + Formular ===== -->
+    <!-- Kontakt Grid -->
     <section class="section">
       <div class="container">
         <div class="contact-grid">
 
-          <!-- Linke Spalte: Standort-Infos -->
+          <!-- Infos -->
           <div class="reveal">
-            <div class="info-card">
+            <div class="info-block">
               <h3>📍 Hauptsitz Lemgo</h3>
-              <ul class="info-list">
-                <li><strong>Adresse:</strong> Lagesche Straße 10-12, 32657 Lemgo</li>
-                <li><strong>Telefon:</strong> <a href="tel:+49526118 6226">(05261) 18 62 26</a></li>
-                <li><strong>Fax:</strong> (05261) 18 62 27</li>
-                <li><strong>E-Mail:</strong> <a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></li>
-              </ul>
+              <table>
+                <tr><td>Adresse</td><td>Lagesche Straße 10-12<br>32657 Lemgo</td></tr>
+                <tr><td>Telefon</td><td><a href="tel:+49526118 6226">(05261) 18 62 26</a></td></tr>
+                <tr><td>Fax</td><td>(05261) 18 62 27</td></tr>
+                <tr><td>E-Mail</td><td><a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></td></tr>
+              </table>
             </div>
 
-            <div class="info-card">
+            <div class="info-block">
               <h3>🕒 Öffnungszeiten Lemgo</h3>
-              <ul class="info-list">
-                <li><strong>Mo–Fr:</strong> 8:30 – 18:00 Uhr</li>
-                <li><strong>Samstag:</strong> 9:30 – 14:00 Uhr</li>
-                <li><strong>Sonntag:</strong> geschlossen</li>
-              </ul>
+              <table>
+                <tr><td>Mo – Fr</td><td>8:30 – 18:00 Uhr</td></tr>
+                <tr><td>Samstag</td><td>9:30 – 14:00 Uhr</td></tr>
+                <tr><td>Sonntag</td><td>geschlossen</td></tr>
+              </table>
             </div>
 
-            <div class="info-card">
+            <div class="info-block">
               <h3>📍 Ausstellung Hille-Hartum</h3>
-              <ul class="info-list">
-                <li><strong>Adresse:</strong> Mindener Straße 457, 32479 Hille-Hartum</li>
-                <li><strong>Telefon:</strong> <a href="tel:+4957139 85622">(0571) 39 85 622</a></li>
-              </ul>
+              <table>
+                <tr><td>Adresse</td><td>Mindener Straße 457<br>32479 Hille-Hartum</td></tr>
+                <tr><td>Telefon</td><td><a href="tel:+4957139 85622">(0571) 39 85 622</a></td></tr>
+                <tr><td>E-Mail</td><td><a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></td></tr>
+              </table>
             </div>
           </div>
 
-          <!-- Rechte Spalte: Formular -->
+          <!-- Formular -->
           <div class="reveal">
             <form class="form" novalidate>
-              <h3 style="margin-bottom:1.25rem;">Schreiben Sie uns</h3>
-
-              <div class="form__row">
-                <div class="field">
-                  <label for="name">Name *</label>
-                  <input type="text" id="name" name="name" autocomplete="name" required />
-                </div>
-                <div class="field">
-                  <label for="email">E-Mail *</label>
-                  <input type="email" id="email" name="email" autocomplete="email" required />
-                </div>
+              <h3>Schreiben Sie uns</h3>
+              <div class="form-row">
+                <div class="field"><label for="name">Name *</label><input type="text" id="name" name="name" autocomplete="name" required /></div>
+                <div class="field"><label for="email">E-Mail *</label><input type="email" id="email" name="email" autocomplete="email" required /></div>
               </div>
-
-              <div class="form__row">
-                <div class="field">
-                  <label for="phone">Telefon</label>
-                  <input type="tel" id="phone" name="phone" autocomplete="tel" />
-                </div>
+              <div class="form-row">
+                <div class="field"><label for="phone">Telefon</label><input type="tel" id="phone" name="phone" autocomplete="tel" /></div>
                 <div class="field">
                   <label for="topic">Anliegen</label>
                   <select id="topic" name="topic">
@@ -104,14 +97,9 @@
                   </select>
                 </div>
               </div>
-
-              <div class="field">
-                <label for="message">Ihre Nachricht *</label>
-                <textarea id="message" name="message" required></textarea>
-              </div>
-
+              <div class="field"><label for="message">Ihre Nachricht *</label><textarea id="message" name="message" required></textarea></div>
               <button type="submit" class="btn btn--primary">Nachricht senden</button>
-              <p class="form__note">* Pflichtfelder. Ihre Daten werden vertraulich behandelt und nur zur Bearbeitung Ihrer Anfrage verwendet.</p>
+              <p class="form__note">* Pflichtfelder. Ihre Daten werden vertraulich behandelt.</p>
               <div class="form__status" role="status" aria-live="polite"></div>
             </form>
           </div>
@@ -120,61 +108,30 @@
       </div>
     </section>
 
-    <!-- ===== Karte (Platzhalter) ===== -->
+    <!-- Karte -->
     <section class="section section--alt">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="section__eyebrow">Anfahrt</span>
+        <div class="sec-head reveal">
+          <span class="eyebrow">Anfahrt</span>
           <h2>So finden Sie uns</h2>
+          <div class="divider"><span>✦</span></div>
         </div>
-        <div class="map reveal" role="img" aria-label="Kartenausschnitt mit den Standorten Lemgo und Hille-Hartum">
-          Lemgo &amp; Hille-Hartum · Ostwestfalen-Lippe
+        <div class="map-placeholder reveal">
+          Karte: Lemgo &amp; Hille-Hartum, Ostwestfalen-Lippe
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__logo">ink<span>O</span> GmbH</div>
-          <p>Einer der größten Gartenmöbelanbieter der Region. Hochwertige Gartenmöbel für den Fachhandel – Qualität seit über 20 Jahren.</p>
-        </div>
-        <div>
-          <h4>Navigation</h4>
-          <ul class="footer__list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="produkte.html">Produkte</a></li>
-            <li><a href="service.html">Service</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Mehr</h4>
-          <ul class="footer__list">
-            <li><a href="grillcorner.html">Grill Corner</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Hauptsitz Lemgo</h4>
-          <ul class="footer__list">
-            <li>Lagesche Straße 10-12</li>
-            <li>32657 Lemgo</li>
-            <li><a href="tel:+49526118 6226">(05261) 18 62 26</a></li>
-            <li><a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <span>&copy; <span data-year>2026</span> Inko GmbH. Alle Rechte vorbehalten.</span>
-        <span><a href="kontakt.html">Impressum</a> &nbsp;·&nbsp; <a href="kontakt.html">Datenschutz</a></span>
-      </div>
+  <footer class="footer"><div class="container">
+    <div class="footer__top">
+      <div class="footer__about"><div class="footer__logo"><img src="images/logo.png" alt="inkO GmbH" /></div><p>Hochwertige Gartenmöbel für den Fachhandel – Qualität seit über 20 Jahren.</p></div>
+      <div><h4>Navigation</h4><ul class="footer__list"><li><a href="index.html">Home</a></li><li><a href="produkte.html">Produkte</a></li><li><a href="service.html">Service</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="grillcorner.html">Grill Corner</a></li><li><a href="ueber-uns.html">Über uns</a></li></ul></div>
+      <div><h4>Lemgo</h4><ul class="footer__list"><li>Lagesche Straße 10-12</li><li>32657 Lemgo</li><li><a href="tel:+49526118 6226">(05261) 18 62 26</a></li><li>Mo–Fr 8:30–18:00</li><li>Sa 9:30–14:00</li></ul></div>
+      <div><h4>Hille-Hartum</h4><ul class="footer__list"><li>Mindener Straße 457</li><li>32479 Hille-Hartum</li><li><a href="tel:+4957139 85622">(0571) 39 85 622</a></li><li><a href="mailto:info@inko-moebel.de">info@inko-moebel.de</a></li></ul></div>
     </div>
-  </footer>
+    <div class="footer__bottom"><span>&copy; <span data-year>2026</span> Inko GmbH.</span><span><a href="kontakt.html">Impressum</a> · <a href="kontakt.html">Datenschutz</a> · <a href="kontakt.html">AGB</a></span></div>
+  </div></footer>
 
   <script src="js/main.js"></script>
 </body>
